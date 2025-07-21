@@ -6,6 +6,7 @@ public static class GameData
 {
     public static string Player1Character;
     public static string Player2Character;
-   
+
+    public static string SelectedMap;
 }
 
