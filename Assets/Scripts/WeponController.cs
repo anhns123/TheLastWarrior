@@ -21,6 +21,17 @@ public class WeaponController : MonoBehaviour
     {
         owner = GetComponentInParent<Player>();
     }
+    private void Update()
+    {
+        if (owner.transform.localScale.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
 
     public void NormalAttack()
     {

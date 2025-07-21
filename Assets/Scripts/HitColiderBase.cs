@@ -5,13 +5,19 @@ public class HitColliderBase : MonoBehaviour
     protected Player owner;
     private float aliveTime;
     private float damage;
-
+    private void Update()
+    {
+        aliveTime -= (Time.deltaTime / 3);
+        if (aliveTime < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     public virtual void Init(Player owner, float duration, float damage)
     {
         this.owner = owner;
         this.aliveTime = duration;
         this.damage = damage;
-        Destroy(gameObject, aliveTime);
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +31,7 @@ public class HitColliderBase : MonoBehaviour
                 health.TakeDamage(damage);
             }
 
-            Destroy(gameObject);
+            aliveTime = 0;
         }
     }
 }
