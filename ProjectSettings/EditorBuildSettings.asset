@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/MapSelect.unity
+    guid: 735444ee9c684164fb15503a9a021721
+  - enabled: 1
+    path: Assets/Scenes/CrystalCave.unity
+    guid: ff4965414fe729b4c8a7aaa3ff951c0b
+  - enabled: 1
+    path: Assets/Scenes/Snowfield.unity
+    guid: d6e726158e05ec34e90dcd2d7a85c60b
+  - enabled: 1
+    path: Assets/Scenes/Volcanoes.unity
+    guid: f651a03a452c98e43a66256ab17d9e5f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
