@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 496a566fbe669494e9fdf8c522c1b818
+guid: 137351b3e95cddc4fb9ff6a939073be4
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
@@ -8,8 +8,8 @@ NativeFormatImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 284501
-  packageName: Evil Wizard 2
+  productId: 174863
+  packageName: Medieval King Pack 2
   packageVersion: 1.0
-  assetPath: Assets/Evil Wizard 2/Animations/Idle.anim
-  uploadId: 662692
+  assetPath: Assets/Medieval King Pack 2/Animations/Attack1.anim
+  uploadId: 380676

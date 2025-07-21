@@ -130,9 +130,9 @@ public class PlayerMovement : MonoBehaviour
     private void HandleFlip(float horizontal)
     {
         if (horizontal > 0)
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         else if (horizontal < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
     private void UpdateAnimation(Vector2 direction)
