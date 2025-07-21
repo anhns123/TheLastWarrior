@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 275f3029761ec59478b582e550eae796
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 284501
+  packageName: Evil Wizard 2
+  packageVersion: 1.0
+  assetPath: Assets/Evil Wizard 2/Animations/Death.anim
+  uploadId: 662692
