@@ -171,4 +171,15 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
+
+    public void SetKeys(KeyCode up, KeyCode down, KeyCode left, KeyCode right, KeyCode attack, KeyCode ulti)
+    {
+        upKey = up;
+        downKey = down;
+        leftKey = left;
+        rightKey = right;
+        attackKey = attack;
+        ultiKey = ulti;
+    }
+
 }
