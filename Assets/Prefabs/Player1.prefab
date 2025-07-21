@@ -231,17 +231,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a866cb91ebc55324ebf5c96004ce07e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upKey: 119
+  downKey: 115
+  leftKey: 97
+  rightKey: 100
+  attackKey: 102
+  ultiKey: 103
   moveSpeed: 5
   jumpForce: 5
+  delayAttack: 0.4
   groundCheck: {fileID: 254222507933407473}
-  checkRadius: 0.2
+  groundCheckRadius: 0.1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
-  fireballPrefab: {fileID: 4584231621066892203}
-  firePoint: {fileID: 5117167844250377483}
-  maxHealth: 100
-  gameOverUI: {fileID: 0}
+    m_Bits: 0
+  weapon: {fileID: 0}
 --- !u!1 &7935003811252330582
 GameObject:
   m_ObjectHideFlags: 0
