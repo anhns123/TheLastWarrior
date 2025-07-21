@@ -2,17 +2,18 @@
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;      // Gán prefab enemy vào đây
-    public float minSpawnTime = 1f;     // Thời gian spawn tối thiểu
-    public float maxSpawnTime = 3f;     // Thời gian spawn tối đa
+    public GameObject enemyPrefab;
 
-    public float spawnY = 6f;           // Vị trí trục Y cố định (trên trời)
-    public float spawnXMin = -8f;       // Giới hạn trái
-    public float spawnXMax = 8f;        // Giới hạn phải
+    public float minSpawnTime = 1f;
+    public float maxSpawnTime = 3f;
+
+    public float spawnY = 8f; // cao hơn platform
+    public float spawnXMin = -8f;
+    public float spawnXMax = 8f;
 
     void Start()
     {
-        SpawnWithDelay(); // bắt đầu vòng lặp
+        SpawnWithDelay();
     }
 
     void SpawnWithDelay()
@@ -28,7 +29,6 @@ public class EnemySpawner : MonoBehaviour
 
         Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
-        // Gọi lại để tiếp tục spawn
         SpawnWithDelay();
     }
 }

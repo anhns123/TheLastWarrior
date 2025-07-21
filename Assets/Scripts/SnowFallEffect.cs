@@ -8,12 +8,12 @@ public class SnowFallEffect : MonoBehaviour
 
     private Collider2D collidedPlatform;
     private bool applied = false;
-
     private const float SNOWFLAKE_LIFETIME = 3f;
 
     private void Start()
     {
-        Destroy(gameObject, SNOWFLAKE_LIFETIME);
+        // Gán layer Snowflake để hệ thống phát hiện overlap
+        gameObject.layer = LayerMask.NameToLayer("Snowflake");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,28 +25,21 @@ public class SnowFallEffect : MonoBehaviour
             if (collidedPlatform.sharedMaterial != iceMaterial)
             {
                 collidedPlatform.sharedMaterial = iceMaterial;
-                Debug.Log($"[Platform] {collidedPlatform.name} trở nên trơn trượt.");
-                applied = true;
+                Debug.Log($"❄ {collidedPlatform.name} trở nên trơn trượt.");
             }
 
-            gameObject.layer = LayerMask.NameToLayer("Snowflake");
+            applied = true;
+            StartCoroutine(HandleSnowflakeLifecycle()); // Bắt đầu đếm ngược khi chạm platform
         }
     }
 
-    private void OnDestroy()
+    private IEnumerator HandleSnowflakeLifecycle()
     {
+        yield return new WaitForSeconds(SNOWFLAKE_LIFETIME);
+
         if (applied && collidedPlatform != null)
         {
-            StartCoroutine(DelayedRevertMaterial(SNOWFLAKE_LIFETIME));
-        }
-    }
-
-    private IEnumerator DelayedRevertMaterial(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        if (collidedPlatform != null)
-        {
+            // Kiểm tra xem còn tuyết nào khác trên platform không
             Collider2D[] snowflakes = Physics2D.OverlapBoxAll(
                 collidedPlatform.bounds.center,
                 collidedPlatform.bounds.size,
@@ -54,11 +47,22 @@ public class SnowFallEffect : MonoBehaviour
                 LayerMask.GetMask("Snowflake")
             );
 
-            if (snowflakes.Length == 0)
+            if (snowflakes.Length == 1) 
             {
                 collidedPlatform.sharedMaterial = normalMaterial;
-                Debug.Log($"[Platform] {collidedPlatform.name} trở lại bình thường.");
+                Debug.Log($"🧊 {collidedPlatform.name} trở lại bình thường.");
             }
+        }
+
+        Destroy(gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (collidedPlatform != null)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireCube(collidedPlatform.bounds.center, collidedPlatform.bounds.size);
         }
     }
 }

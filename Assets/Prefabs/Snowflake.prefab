@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7336558836100365903}
   - component: {fileID: 1698497459755346918}
   - component: {fileID: 3776341576011283023}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Snowflake
   m_TagString: Snowflake
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8246, y: 4.7214, z: 0}
-  m_LocalScale: {x: 0.17533532, y: 0.15019383, z: 1}
+  m_LocalScale: {x: 0.22541107, y: 0.19540216, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

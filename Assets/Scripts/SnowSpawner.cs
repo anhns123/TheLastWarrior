@@ -2,41 +2,52 @@
 
 public class SnowSpawner : MonoBehaviour
 {
-    public GameObject snowflakePrefab;        // Prefab của tuyết
-    public float spawnInterval = 1f;          // Thời gian giữa mỗi đợt tuyết rơi
-    public float spawnYOffset = 2f;           // Vị trí tuyết spawn trên platform
+    public GameObject snowflakePrefab;
+    public GameObject[] platforms;             // Danh sách platform
+    public float spawnYOffset = 2f;            // Độ cao rơi từ trên platform
+    public float snowLifetime = 1.5f;          // Thời gian tồn tại của tuyết
+    public float minDelay = 3f;                // Delay giữa các lượt spawn
+    public float maxDelay = 4f;
 
-    private void Start()
+    void Start()
     {
-        InvokeRepeating(nameof(SpawnSnowflakesOnClearPlatforms), 0f, spawnInterval);
+        // Nếu chưa gán trong Inspector thì tự tìm theo tag
+        if (platforms == null || platforms.Length == 0)
+        {
+            platforms = GameObject.FindGameObjectsWithTag("Platform");
+        }
+
+        // Bắt đầu vòng lặp sinh tuyết
+        SpawnWithDelay();
     }
 
-    void SpawnSnowflakesOnClearPlatforms()
+    void SpawnWithDelay()
     {
-        Debug.Log("⛄ Kiểm tra các platform để spawn tuyết...");
+        float delay = Random.Range(minDelay, maxDelay);
+        Invoke("SpawnSnow", delay);
+    }
 
-        GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
+    void SpawnSnow()
+    {
+        if (platforms.Length == 0) return;
 
-        foreach (GameObject platform in platforms)
-        {
-            Collider2D platformCol = platform.GetComponent<Collider2D>();
-            if (platformCol == null) continue;
+        // Chọn 1 platform ngẫu nhiên
+        GameObject platform = platforms[Random.Range(0, platforms.Length)];
+        Collider2D col = platform.GetComponent<Collider2D>();
+        if (col == null) return;
 
-            Collider2D[] snowflakes = Physics2D.OverlapBoxAll(
-                platformCol.bounds.center,
-                platformCol.bounds.size,
-                0f,
-                LayerMask.GetMask("Snowflake")
-            );
+        // Tính vị trí random theo chiều ngang trong platform
+        float width = col.bounds.size.x;
+        float randomXOffset = Random.Range(-width / 2f, width / 2f);
+        Vector3 spawnPos = platform.transform.position + new Vector3(randomXOffset, spawnYOffset, 0f);
 
-            if (snowflakes.Length == 0)
-            {
-                Debug.Log($"→ Spawn tuyết trên: {platform.name}");
+        // Sinh bông tuyết
+        GameObject snow = Instantiate(snowflakePrefab, spawnPos, Quaternion.identity);
 
-                Vector3 spawnPos = platform.transform.position + new Vector3(0f, spawnYOffset, 0f);
-                GameObject snow = Instantiate(snowflakePrefab, spawnPos, Quaternion.identity);
-                snow.layer = LayerMask.NameToLayer("Snowflake");
-            }
-        }
+        // Hủy tuyết sau 1.5 giây
+        Destroy(snow, snowLifetime);
+
+        // Tiếp tục vòng lặp
+        SpawnWithDelay();
     }
 }
