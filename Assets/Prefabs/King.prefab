@@ -185,7 +185,7 @@ MonoBehaviour:
   rightKey: 100
   attackKey: 102
   ultiKey: 103
-  moveSpeed: 4
+  moveSpeed: 5
   jumpForce: 8
   delayAttack: 0.4
   groundCheck: {fileID: 3029795273261013704}
@@ -304,6 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalHitPrefab: {fileID: 2869963022791671213, guid: 821931dd381f31a4e8ed25b9b097a766, type: 3}
-  normalHitCooldown: 0.2
   ultiHitPrefab: {fileID: 3820883798088972652, guid: 1edc85d0bcdf1c64b8511a14770ffa62, type: 3}
+  normalDamage: 15
+  ultiDamage: 30
+  normalHitCooldown: 0.2
   ultiHitCooldown: 1

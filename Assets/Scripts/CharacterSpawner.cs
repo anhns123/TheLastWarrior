@@ -29,5 +29,14 @@ public class CharacterSpawner : MonoBehaviour
 
         GameObject character = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         character.name = characterName + "_" + playerTag; // Đặt tên rõ ràng hơn cho nhân vật trong scene
+
+        if(playerTag == "Player1")
+        {
+            character.GetComponent<PlayerMovement>().SetKeys(KeyCode.W,KeyCode.S,KeyCode.A,KeyCode.D,KeyCode.C,KeyCode.V);
+        }
+        if (playerTag == "Player2")
+        {
+            character.GetComponent<PlayerMovement>().SetKeys(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.K, KeyCode.L);
+        }
     }
 }
