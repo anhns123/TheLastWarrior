@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77963676}
   - component: {fileID: 77963675}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314283253}
   - component: {fileID: 314283252}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AirPlatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576057728}
   - component: {fileID: 576057727}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AirPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041797147}
   - component: {fileID: 1041797146}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

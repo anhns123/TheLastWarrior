@@ -17,7 +17,7 @@ public class WeaponController : MonoBehaviour
     }
     private void Update()
     {
-        if (owner.transform.localScale.x == -1)
+        if (owner.transform.localScale.x < 0)
         {
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }

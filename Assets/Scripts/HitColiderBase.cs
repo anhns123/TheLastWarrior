@@ -4,12 +4,19 @@ using UnityEngine;
 public class HitColliderBase : MonoBehaviour
 {
     protected Player owner;
-    private float aliveTime;
+    float aliveTime;
+    private void Update()
+    {
+        aliveTime -= (Time.deltaTime/3);
+        if(aliveTime < 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     public virtual void Init(Player owner, float duration)
     {
         this.owner = owner;
         aliveTime = duration;
-        Destroy(gameObject, aliveTime);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -21,5 +28,4 @@ public class HitColliderBase : MonoBehaviour
             // Gây sát thương ở đây
         }
     }
-
 }
