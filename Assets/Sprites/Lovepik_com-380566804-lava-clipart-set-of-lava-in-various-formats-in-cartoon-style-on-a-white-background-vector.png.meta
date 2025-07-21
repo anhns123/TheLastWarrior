@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: db5d1713efb2c6a47b5b581e0eba9c6b
+guid: 35be83aa7c5ea9e42a35a77ffc96914b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6926564202912269600
-    second: "tuy\u1EBFt_0"
+      213: -772397378215797631
+    second: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_0
+  - first:
+      213: 7891947259980533079
+    second: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_1
+  - first:
+      213: 1548177292456479912
+    second: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_2
+  - first:
+      213: 7131657504978026701
+    second: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_3
+  - first:
+      213: -2534721424591886695
+    second: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "tuy\u1EBFt_0"
+      name: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 47
-        width: 388
-        height: 382
+        x: 151
+        y: 2632
+        width: 1998
+        height: 1302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ea3a735e86efdf90800000000000000
-      internalID: -6926564202912269600
+      spriteID: 18c11064da4e745f0800000000000000
+      internalID: -772397378215797631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_1
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 1470
+        width: 2269
+        height: 2472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75dc1493834d58d60800000000000000
+      internalID: 7891947259980533079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1386
+        width: 1548
+        height: 1093
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acc13e7b0b3c7510800000000000000
+      internalID: 1548177292456479912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_3
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 241
+        width: 1663
+        height: 1171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0c6f337bcb8f260800000000000000
+      internalID: 7131657504978026701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lovepik_com-380566804-lava-clipart-set-of-lava-in-various-formats-in-cartoon-style-on-a-white-background-vector_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 290
+        width: 2049
+        height: 962
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996e0aa3b4cd2dcd0800000000000000
+      internalID: -2534721424591886695
       vertices: []
       indices: 
       edges: []
@@ -160,8 +260,6 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "tuy\u1EBFt_0": -6926564202912269600
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
