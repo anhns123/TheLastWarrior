@@ -205,7 +205,7 @@ MonoBehaviour:
   rightKey: 100
   attackKey: 102
   ultiKey: 103
-  moveSpeed: 2
+  moveSpeed: 3
   jumpForce: 8
   delayAttack: 0.1
   groundCheck: {fileID: 4396430733751610896}
