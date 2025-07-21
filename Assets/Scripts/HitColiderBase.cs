@@ -1,25 +1,31 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HitColliderBase : MonoBehaviour
 {
     protected Player owner;
     private float aliveTime;
-    public virtual void Init(Player owner, float duration)
+    private float damage;
+
+    public virtual void Init(Player owner, float duration, float damage)
     {
         this.owner = owner;
-        aliveTime = duration;
+        this.aliveTime = duration;
+        this.damage = damage;
         Destroy(gameObject, aliveTime);
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        // Logic gây sát thương
         Player target = other.GetComponent<Player>();
         if (target != null && target != owner)
         {
-            // Gây sát thương ở đây
+            HealthManager health = target.GetComponent<HealthManager>();
+            if (health != null)
+            {
+                health.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
         }
     }
-
 }

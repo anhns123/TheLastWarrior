@@ -44,7 +44,8 @@ GameObject:
   - component: {fileID: 8103587142285319223}
   - component: {fileID: 6041479004217740222}
   - component: {fileID: 8144089814450983930}
-  - component: {fileID: 1669198794458331861}
+  - component: {fileID: 22676789388729712}
+  - component: {fileID: 3156360367119194360}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -61,8 +62,8 @@ Transform:
   m_GameObject: {fileID: 6257757220764179442}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.198, y: -2.308, z: 0}
-  m_LocalScale: {x: 1.849207, y: 1.6294255, z: 1}
+  m_LocalPosition: {x: 831, y: 158, z: 0}
+  m_LocalScale: {x: 73.30632, y: 105.35566, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 254222507933407473}
@@ -219,7 +220,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1669198794458331861
+--- !u!114 &22676789388729712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,20 +229,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 6257757220764179442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a866cb91ebc55324ebf5c96004ce07e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d284c830b8640844866ace1c7f51ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 5
+  upKey: 119
+  downKey: 115
+  leftKey: 97
+  rightKey: 100
+  attackKey: 102
+  ultiKey: 103
+  moveSpeed: 2
+  jumpForce: 15
+  delayAttack: 0.4
   groundCheck: {fileID: 254222507933407473}
-  checkRadius: 0.2
+  groundCheckRadius: 0.1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
-  fireballPrefab: {fileID: 4584231621066892203}
-  firePoint: {fileID: 5117167844250377483}
+    m_Bits: 0
+  weapon: {fileID: 0}
+--- !u!114 &3156360367119194360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257757220764179442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f79e87193e2444ca07beb588d9751f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   maxHealth: 100
-  gameOverUI: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!1 &7935003811252330582
 GameObject:
   m_ObjectHideFlags: 0
